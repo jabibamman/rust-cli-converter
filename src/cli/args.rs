@@ -54,8 +54,8 @@ impl CliConfig {
                     if let Some(extension) = path.extension() {
                         let format = extension.to_str().unwrap();
                         config.conversion_type = match format {
-                            "json" => ConversionType::JsonToXml,
-                            "xml" => ConversionType::XmlToJson,
+                            "xml" => ConversionType::JsonToXml,
+                            "json" => ConversionType::XmlToJson,
                             _ => return Err("Invalid format".to_string()),
                         };
                     }
@@ -77,7 +77,7 @@ impl CliConfig {
         }
 
         if config.help {
-            return Err("Help".to_string());
+            return Err("Not Implemented".to_string());
         }
 
         if config.input_file.is_empty() || config.output_file.is_empty() {
